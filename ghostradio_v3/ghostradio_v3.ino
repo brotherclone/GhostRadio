@@ -22,7 +22,7 @@ int ghostradiocurtrack = ghostradiotracknum;
 Potentiometer dial = Potentiometer(A0); 
 
 void setup() {
-  randomSeed();
+  randomSeed(analogRead(A1));  
   int intialtrack = random(1,ghostradiotracknum);
   int ghostradiocurtrack = intialtrack;
   pinMode(redled, OUTPUT);
