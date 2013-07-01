@@ -47,6 +47,8 @@ void loop() {
       ghostradiocurtrack = ghostradiodial;
       MP3player.stopTrack ();
       MP3player.playTrack(ghostradiocurtrack);
+      
+      // Put stop to pent listener 
     }
   }
   if(((ghostradiodial>potentiometer2.getValue()/6)||(ghostradiodial>(potentiometer2.getValue()/6)))) {
@@ -87,7 +89,7 @@ void loop() {
   analogWrite(redled, brightness);    
   analogWrite(orangeled, brightness);  
   brightness = brightness + fadeAmount;
-  
+  // have orange light flare  with pent change.
   if (brightness == 0 || brightness == 255) {
     fadeAmount = -fadeAmount ; 
   }      
@@ -97,6 +99,8 @@ void loop() {
   if (ghostradioplaychecker==0){
     MP3player.playTrack(ghostradiocurtrack);
   }
+  
+  
   
   delay(30);
 }
