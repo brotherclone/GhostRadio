@@ -22,6 +22,7 @@ int ghostradiocurtrack = ghostradiotracknum;
 Potentiometer dial = Potentiometer(A0); 
 
 void setup() {
+  randomSeed();
   int intialtrack = random(1,ghostradiotracknum);
   int ghostradiocurtrack = intialtrack;
   pinMode(redled, OUTPUT);
@@ -49,8 +50,8 @@ void loop() {
     fadeAmount = -fadeAmount ;
   }
   if (!MP3player.isPlaying()){
-    if((ghostradiocurtrack+2)>=40){
-      ghostradiocurtrack = ghostradiocurtrack+2;
+    if((ghostradiocurtrack+1)>=40){
+      ghostradiocurtrack = ghostradiocurtrack+1;
       MP3player.playTrack(ghostradiocurtrack);
       int setinit = 1;
     }else{
