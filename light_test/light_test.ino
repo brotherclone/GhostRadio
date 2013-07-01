@@ -1,5 +1,5 @@
 
-int redled = 11;           // the pin that the LED is attached to
+int redled = 13;           // the pin that the LED is attached to
 int orangeled = 10; 
 int brightness = 0;    // how bright the LED is
 int fadeAmount = 5;    // how many points to fade the LED by
