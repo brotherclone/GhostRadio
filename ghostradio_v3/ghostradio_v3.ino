@@ -50,7 +50,7 @@ void loop() {
     fadeAmount = -fadeAmount ;
   }
   if (!MP3player.isPlaying()){
-    if((ghostradiocurtrack+1)>=40){
+    if((ghostradiocurtrack+1)<=40){
       ghostradiocurtrack = ghostradiocurtrack+1;
       MP3player.playTrack(ghostradiocurtrack);
       int setinit = 1;
